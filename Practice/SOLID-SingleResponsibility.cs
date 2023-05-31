@@ -29,7 +29,7 @@ namespace Practice
         private int quantity;
         private double discountRate;
         private double taxRate;
-        private double total;
+        //private double total;
 
         public Invoice(Book book, int quantity, double discountRate, double taxRate)
         {
