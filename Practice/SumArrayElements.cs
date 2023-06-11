@@ -10,18 +10,18 @@ namespace Practice
     {
         //public class Program
         //{
-        //    public static void Main(string[] args)
+        //    public static void Main()
         //    {
-        //        int[] arrayElement = new int[3];
-        //        for(int i = 0;i < 3; i++)
+        //        int[] arrayElements = new int[3];
+        //        for(int i = 0; i < arrayElements.Length; i++)
         //        {
-        //            Console.WriteLine("Please input 3 elements: ");
-        //            arrayElement[i] = int.Parse(Console.ReadLine());
+        //            Console.WriteLine("Please input 3 numbers: ");
+        //            arrayElements[i] = int.Parse(Console.ReadLine());
         //        }
         //        int sum = 0;
-        //        for(int j = 0;j<3;j++)
-        //        {
-        //            sum = sum + arrayElement[j];
+        //        for (int j = 0;j <arrayElements.Length; j++)
+        //        {                  
+        //            sum = sum + arrayElements[j];
         //        }
         //        Console.WriteLine(sum);
         //    }
