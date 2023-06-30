@@ -81,8 +81,10 @@ namespace Practice
         //{
         //    public static void Main(string[] args)
         //    {
-        //        Student stu1 = new Student(RepositoryFactory.GetStudentRepository());
+        //        //Student stu1 = new Student(RepositoryFactory.GetStudentRepository());
         //        //Student stu2 = new Student(RepositoryFactory.GetXX()); // will have error because the parameter passed to Student is IStudentRepository. So you cannot pass in anything other than IStudentRepository. 
+        //        Student s1 = new Student(new StudentRepository());
+        //        s1.Save();
         //    }
         //}
 

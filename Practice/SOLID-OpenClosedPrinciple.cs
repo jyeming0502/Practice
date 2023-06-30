@@ -42,5 +42,13 @@ namespace Practice
         //        OfflineCourse  offCourse = new OfflineCourse();
         //    }
         //}
+        //public class Program
+        //{
+        //    public static void Main()
+        //    {
+        //        Course c = new OnlineCourse() { Name = "Finance" };
+        //        c.Subscribe();
+        //    }
+        //}
     }
 }

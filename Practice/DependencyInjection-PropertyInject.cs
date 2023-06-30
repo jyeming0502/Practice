@@ -14,7 +14,7 @@ namespace Practice
         }
         public class Employee
         {
-            public int ID  { get; set; }
+            public int ID { get; set; }
             public string Name { get; set; }
             public string Department { get; set; }
         }
@@ -38,7 +38,7 @@ namespace Practice
             {
                 set { employee = value; } // the EmployeeDAL object will be the value
             }
-            public List<Employee>SelectAllEmployees()
+            public List<Employee> SelectAllEmployees()
             {
                 return employee.GetAllEmployees();
             }

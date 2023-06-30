@@ -13,7 +13,7 @@ namespace Practice
             void Operation();
         }
 
-        public class ConcreteProductA: IProduct
+        public class ConcreteProductA : IProduct
         {
             public void Operation()
             {
@@ -21,19 +21,11 @@ namespace Practice
             }
         }
 
-        public class ConcreteProductB: IProduct 
+        public class ConcreteProductB : IProduct
         {
             public void Operation()
             {
                 Console.WriteLine("Operation for Concrete Product A");
-            }
-        }
-
-        public class ConcreteProductC
-        {
-            public void Operation()
-            {
-                Console.WriteLine("Operation for Concrete Product C");
             }
         }
 
@@ -42,11 +34,11 @@ namespace Practice
         {
             public IProduct CreateProduct(string type)
             {
-                switch(type)
+                switch (type)
                 {
-                    case "A": 
+                    case "A":
                         return new ConcreteProductA();
-                    case "B": 
+                    case "B":
                         return new ConcreteProductB();
                     default:
                         throw new ArgumentException("Invalid product type");
@@ -75,6 +67,6 @@ namespace Practice
         //        newClient.ExecuteOperation();
         //    }
         //}
-            
+
     }
 }

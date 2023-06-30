@@ -33,7 +33,7 @@ namespace Practice
         // not good because EmployeeBL and EmployeeDAL are tightly coupled
         public class EmployeeBL
         {
-            EmployeeDAL employeeDAL;
+            EmployeeDAL employeeDAL = new EmployeeDAL();
             public List<Employee>GetAllEmployees()
             {
                 return employeeDAL.SelectAllEmployees();
