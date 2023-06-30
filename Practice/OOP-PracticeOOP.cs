@@ -8,57 +8,60 @@ namespace Practice
 {
     public class PracticeOOP
     {
-        public interface ILogger
-        {
+       public interface ILogger
+       {
             void Log();
-        }
+       }
+
         public class LoggerA: ILogger
         {
             public void Log()
             {
-                Console.WriteLine("This is for Log A");
+                Console.WriteLine("Log A");
             }
         }
+
         public class LoggerB: ILogger
         {
             public void Log()
             {
-                Console.WriteLine("This is for Log B");
+                Console.WriteLine("Log B");
             }
         }
+
         public class LoggerC: ILogger
         {
             public void Log()
             {
-                Console.WriteLine("This is for Log C");
+                Console.WriteLine("Log C");
             }
         }
 
         public class SimpleFactory
         {
-            public ILogger GetLoggerObject(string type)
+            public ILogger GetLogObject(string type)
             {
                 if (type == "A")
                 {
                     return new LoggerA();
                 }
-                else if (type == "B")
+                else if (type =="B")
                 {
                     return new LoggerB();
                 }
-                else return new LoggerC();                   
+                else  return new LoggerC();                            
             }
-
         }
 
         //public class Program
         //{
-        //    public static void Main(string[] args)
+        //    public static void Main()
         //    {
         //        SimpleFactory factory = new SimpleFactory();
-        //        ILogger myLogger = factory.GetLoggerObject("A");
-        //        myLogger.Log();
+        //        ILogger _logger = factory.GetLogObject("A");
+        //        _logger.Log();
         //    }
         //}
+
     }
 }

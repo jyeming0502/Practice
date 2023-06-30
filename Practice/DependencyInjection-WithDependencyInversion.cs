@@ -8,6 +8,7 @@ namespace Practice
 {
     public class DependencyInjection_WithDependencyInversion
     {
+
         public interface IEmployeeDAL
         {
             // interface can contain properties, but cannot contain fields
@@ -22,27 +23,27 @@ namespace Practice
         }
 
         // dependency object (Service)
-        public class EmployeeDAL: IEmployeeDAL
+        public class EmployeeDAL : IEmployeeDAL
         {
-            public List<Employee>SelectAllEmployees()
+            public List<Employee> SelectAllEmployees()
             {
                 List<Employee> employees = new List<Employee>()
-                {
-                    new Employee(){Id = 1, Name = "Jyeming", Department = "IT"},
-                    new Employee(){Id = 1, Name = "Zhunyee", Department = "IT"}
-                };
+            {
+                new Employee(){Id = 1, Name = "Jyeming", Department = "IT"},
+                new Employee(){Id = 1, Name = "Zhunyee", Department = "IT"}
+            };
                 return employees;
             }
         }
 
         //inversion of control by creating a factory class to create new object EmployeeDAL
-        //public class EMployeeDALFactory
-        //{
-        //    public static EmployeeDAL GetEmployeeDALObject()
-        //    {
-        //        return new EmployeeDAL();
-        //    }
-        //}
+        public class EMployeeDALFactory
+        {
+            public static EmployeeDAL GetEmployeeDALObject()
+            {
+                return new EmployeeDAL();
+            }
+        }
 
         // dependent object (Client)
         // depends on abstraction now
@@ -50,10 +51,10 @@ namespace Practice
         {
             //inversion of control
             //EmployeeDAL _employeeDAL;
-            //public void GetAllEmployees()
+            //public List<Employee> GetAllEmployees()
             //{
             //    _employeeDAL = EMployeeDALFactory.GetEmployeeDALObject();
-            //    _employeeDAL.SelectAllEmployees();
+            //    return _employeeDAL.SelectAllEmployees();
             //}
 
 
@@ -83,6 +84,12 @@ namespace Practice
         //{
         //    public static void Main(string[] args)
         //    {
+        //        inversion of control - use EMployeeDALFactory to get the object of EmployeeDAL
+        //       EmployeeDAL employeeDAL = EMployeeDALFactory.GetEmployeeDALObject();
+        //        EmployeeBL empBL = new EmployeeBL();
+        //        List<Employee> getEmployee = empBL.GetAllEmployees();
+
+
         //        EmployeeBL empBL = new EmployeeBL(new EmployeeDAL());
         //        List<Employee> getEmployee = empBL.GetAllEmployees();
         //        foreach (Employee emp in getEmployee)

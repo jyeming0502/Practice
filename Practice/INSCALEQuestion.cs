@@ -23,11 +23,10 @@ namespace Practice
                 YearOfExperience = experience;
             }
 
-            public virtual double CalculateCommission()
+            public virtual void CalculateCommission()
             {
                 double commission = CommissionRate * YearOfExperience;
                 Console.WriteLine("Your commission is: " + commission);
-                return commission;
             }          
         }
 
@@ -39,7 +38,7 @@ namespace Practice
                 this.Salary = baseSalary;
             }
 
-            public override double CalculateCommission()
+            public override void CalculateCommission()
             {
                 double yourSalary = Salary * CommissionRate;
                 Console.WriteLine("Firstname: " + FirstName);
@@ -47,7 +46,6 @@ namespace Practice
                 Console.WriteLine("Commission Rate: " + CommissionRate);
                 Console.WriteLine("Experience: " + YearOfExperience);
                 Console.WriteLine("This is your total salary: " + yourSalary);
-                return yourSalary;
             }
         }
         //public class Program

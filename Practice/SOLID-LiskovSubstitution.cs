@@ -10,13 +10,12 @@ namespace Practice
     {
         public interface IGeneralEmployee
         {
+            public int Salary { get; set; }
+            public int Year { get; set; }
             public void CalculateSalary();
         }
         public class ExceptionalEmployee
         {
-            public int Salary { get; set; }
-            public int Year { get; set; }
-
             public void CalculateBonus(int year, int salary)
             {
                 int totalBonus = year * salary;
@@ -25,6 +24,8 @@ namespace Practice
         }
         public class PermanentEmployee: ExceptionalEmployee, IGeneralEmployee
         {
+            public int Salary { get; set;}
+            public int Year { get; set; } 
             public PermanentEmployee(int salary, int year)
             {
                 this.Salary = salary;
@@ -45,6 +46,7 @@ namespace Practice
         public class ContractualEmployee: IGeneralEmployee
         {
             public int Salary { get; set; }
+            public int Year { get; set; }
             public ContractualEmployee(int salary)
             {
                 this.Salary = salary;
