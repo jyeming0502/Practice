@@ -48,17 +48,17 @@ namespace Practice
             }
         }
 
-        public class Program
-        {
-            public static void Main()
-            {
-                EmployeeBL emp = new EmployeeBL(new EmployeeDAL());
-                List<Employee> empEmp = emp.SelectEmployees();
-                foreach(Employee empE in empEmp)
-                {
-                    Console.WriteLine("{0}, {1}", empE.Name, empE.Department);
-                }
-            }
-        }
+        //public class Program
+        //{
+        //    public static void Main()
+        //    {
+        //        EmployeeBL emp = new EmployeeBL(new EmployeeDAL());
+        //        List<Employee> empEmp = emp.SelectEmployees();
+        //        foreach(Employee empE in empEmp)
+        //        {
+        //            Console.WriteLine("{0}, {1}", empE.Name, empE.Department);
+        //        }
+        //    }
+        //}
     }
 }
