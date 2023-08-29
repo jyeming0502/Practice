@@ -32,7 +32,7 @@ namespace Practice
         // uses SimpleFactory class to create object based on a parameter. 
         public class SimpleFactory
         {
-            public IProduct CreateProduct(string type)
+            public static IProduct CreateProduct(string type)
             {
                 switch (type)
                 {
@@ -46,27 +46,29 @@ namespace Practice
             }
         }
 
-        public class Client
-        {
-            public IProduct _product;
-            public Client(SimpleFactory product, string type)
-            {
-                _product = product.CreateProduct(type);
-            }
-            public void ExecuteOperation()
-            {
-                _product.Operation();
-            }
-        }
-        //public class Program
+        //public class Client
         //{
-        //    public static void Main(string[] args)
+        //    public IProduct _product;
+        //    public Client(SimpleFactory product, string type)
         //    {
-        //        SimpleFactory _factory = new SimpleFactory();
-        //        Client newClient = new Client(_factory, "A");
-        //        newClient.ExecuteOperation();
+        //        _product = product.CreateProduct(type);
+        //    }
+        //    public void ExecuteOperation()
+        //    {
+        //        _product.Operation();
         //    }
         //}
+        public class Program
+        {
+            public static void Main(string[] args)
+            {
+                //SimpleFactory _factory = new SimpleFactory();
+                //Client newClient = new Client(_factory, "A");
+                //newClient.ExecuteOperation();
+                IProduct _pro = SimpleFactory.CreateProduct("A");
+                _pro.Operation();
+            }
+        }
 
     }
 }

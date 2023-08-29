@@ -28,10 +28,10 @@ namespace Practice
             public List<Employee> SelectAllEmployees()
             {
                 List<Employee> employees = new List<Employee>()
-            {
-                new Employee(){Id = 1, Name = "Jyeming", Department = "IT"},
-                new Employee(){Id = 1, Name = "Zhunyee", Department = "IT"}
-            };
+                {
+                    new Employee(){Id = 1, Name = "Jyeming", Department = "IT"},
+                    new Employee(){Id = 1, Name = "Zhunyee", Department = "IT"}
+                };
                 return employees;
             }
         }
